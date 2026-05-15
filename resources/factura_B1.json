@@ -1,0 +1,11 @@
+{
+  "from_date": "2025-03-01",
+  "to_date": "2025-03-31",
+  "bill_date": "2025-04-04",
+  "bill_number": "INV-2025-034",
+  "client": "Serveis Energètics del Nord S.A.",
+  "vat_number": "A58421977",
+  "base": 980.40,
+  "tax": 205.88,
+  "total": 1186.28
+}

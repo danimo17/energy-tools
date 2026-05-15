@@ -1,0 +1,11 @@
+{
+  "from_date": "2025-04-01",
+  "to_date": "2025-04-30",
+  "bill_date": "2025-05-06",
+  "bill_number": "INV-2025-041",
+  "client": "Comercial Riera i Fills S.L.",
+  "vat_number": "B13890264",
+  "base": 215.90,
+  "tax": 45.34,
+  "total": 261.24
+}

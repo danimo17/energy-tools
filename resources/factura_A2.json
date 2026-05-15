@@ -1,0 +1,16 @@
+{
+  "range": {
+    "from": "2025-05-01",
+    "to": "2025-04-30"
+  },
+  "date": "2025-05-07",
+  "number": "F2025-0048",
+  "client": {
+    "name": "Tallers Montseny S.L.",
+    "vat_number": "B123",
+    "address": "Carrer Major 18, 08460 Santa Maria de Palautordera"
+  },
+  "base": 500.00,
+  "tax": 105.00,
+  "total": 605.00
+}

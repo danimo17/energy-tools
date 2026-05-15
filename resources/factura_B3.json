@@ -1,0 +1,11 @@
+{
+  "from_date": "2025-06-01",
+  "to_date": "2025-06-30",
+  "bill_date": "2025-07-04",
+  "bill_number": "",
+  "client": "Distribucions La Plana S.A.",
+  "vat_number": "A58421977",
+  "base": 1250.00,
+  "tax": 262.50,
+  "total": 1600.00
+}

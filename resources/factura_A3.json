@@ -1,0 +1,16 @@
+{
+  "range": {
+    "from": "2025-02-01",
+    "to": "2025-02-28"
+  },
+  "date": "2025-03-03",
+  "number": "F2025-0002",
+  "client": {
+    "name": "Ajuntament de Vilamajor",
+    "vat_number": "P0830500C",
+    "address": "Plaça Major 1, 08458 Sant Pere de Vilamajor"
+  },
+  "base": 3420.75,
+  "tax": 718.36,
+  "total": 4139.11
+}
