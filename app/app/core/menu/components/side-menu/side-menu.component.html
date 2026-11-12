@@ -1,0 +1,35 @@
+<ng-container *ngIf="mobile$ | async; else desktop">
+  <header class="top-bar">
+    <app-button
+      variant="ghost"
+      severity="contrast"
+      [label]="drawerOpen ? 'menu.close' : 'menu.open'"
+      [icon]="drawerOpen ? 'close' : 'menu'"
+      [iconOnly]="true"
+      (pressed)="toggleDrawer()"
+    ></app-button>
+    <span class="brand">{{ 'app.name' | t }}</span>
+  </header>
+
+  <app-drawer
+    side="left"
+    offsetTop="var(--top-bar-height)"
+    [open]="drawerOpen"
+    [card]="drawerCard"
+    (action)="onDrawerAction($event)"
+    (closed)="drawerOpen = false"
+    (afterClosed)="showView('menu')"
+  >
+    <app-menu-nav *ngIf="view === 'menu'" (navigate)="drawerOpen = false" (settings)="openSettings()"></app-menu-nav>
+    <ng-container *ngIf="view === 'settings'">
+      <ng-container *ngTemplateOutlet="settingsPanel ?? null"></ng-container>
+    </ng-container>
+  </app-drawer>
+</ng-container>
+
+<ng-template #desktop>
+  <aside class="side-menu">
+    <span class="brand">{{ 'app.name' | t }}</span>
+    <app-menu-nav (settings)="settings.emit()"></app-menu-nav>
+  </aside>
+</ng-template>

@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Energy Tools"
+  },
+  "language": {
+    "ca": "Català",
+    "es": "Castellano"
+  },
+  "common": {
+    "action": {
+      "accept": "Acceptar",
+      "cancel": "Cancel·lar",
+      "close": "Tancar",
+      "back": "Enrere",
+      "upload": "Pujar",
+      "remove": "Treure {entity}",
+      "import": "Importar",
+      "view": "Veure {entity}",
+      "delete": "Eliminar {entity}"
+    },
+    "confirm": {
+      "title": "Confirmació",
+      "message": "Segur que vols continuar?",
+      "delete": {
+        "m": "Vols eliminar aquest {entity}? Aquesta acció no es pot desfer.",
+        "f": "Vols eliminar aquesta {entity}? Aquesta acció no es pot desfer."
+      }
+    },
+    "success": "Acció completada correctament",
+    "error": "S'ha produït un error",
+    "empty": "No hi ha dades per mostrar",
+    "actions": "Accions",
+    "loading": "Carregant…",
+    "field": {
+      "file": "Fitxer",
+      "status": "Estat",
+      "comments": "Comentaris",
+      "number": "Número",
+      "client": "Client",
+      "date": "Data",
+      "base": "Base imposable",
+      "tax": "Impost",
+      "total": "Total",
+      "noNumber": "(sense número)",
+      "period": "Període facturat",
+      "vat": "NIF/CIF",
+      "address": "Adreça"
+    },
+    "status": {
+      "pending": "Pendent",
+      "uploading": "Pujant…",
+      "created": {
+        "m": "Creat",
+        "f": "Creada"
+      },
+      "createdWarnings": {
+        "m": "Creat amb avisos",
+        "f": "Creada amb avisos"
+      },
+      "updated": {
+        "m": "Actualitzat",
+        "f": "Actualitzada"
+      },
+      "updatedWarnings": {
+        "m": "Actualitzat amb avisos",
+        "f": "Actualitzada amb avisos"
+      },
+      "blocked": {
+        "m": "No creat",
+        "f": "No creada"
+      }
+    },
+    "result": {
+      "deleted": {
+        "m": "{Entity} eliminat",
+        "f": "{Entity} eliminada"
+      }
+    }
+  },
+  "pages": {
+    "dashboard": "Dashboard",
+    "invoices": "Factures",
+    "settings": "Configuració"
+  },
+  "menu": {
+    "open": "Obrir el menú",
+    "close": "Tancar el menú"
+  },
+  "dashboard": {
+    "welcome": "Benvingut a l'eina de factures."
+  },
+  "invoices": {
+    "issue": {
+      "baseRequired": "Falta la base imposable o no és un número",
+      "missingAddress": "El client no té adreça",
+      "emptyNumber": "La factura no té número",
+      "invertedRange": "El període és invers: {from} és posterior a {to}",
+      "invalidVat": "El NIF/CIF «{vat}» no és vàlid",
+      "taxComputed": "Impost calculat (21 % de la base): {tax}",
+      "totalComputed": "Total calculat (base + impost): {total}",
+      "totalMismatch": "El total ({total}) no quadra amb base + impost ({expected})",
+      "missingVat": "El client no té NIF/CIF"
+    }
+  },
+  "toast": {
+    "title": {
+      "info": "Informació",
+      "success": "Èxit",
+      "warning": "Avís",
+      "error": "Error"
+    }
+  },
+  "settings": {
+    "language": "Idioma",
+    "theme": {
+      "title": "Tema",
+      "light": "Clar",
+      "dark": "Fosc"
+    }
+  },
+  "entity": {
+    "invoice": {
+      "name": "factura",
+      "gender": "f",
+      "plural": "factures"
+    },
+    "file": {
+      "name": "fitxer",
+      "gender": "m",
+      "plural": "fitxers"
+    }
+  },
+  "import": {
+    "title": "Importar {entities}",
+    "hint": "Arrossega aquí els fitxers JSON",
+    "select": "Seleccionar fitxers",
+    "empty": "Encara no has afegit cap fitxer",
+    "summary": {
+      "title": "Resultat de la pujada"
+    },
+    "serverError": "Error del servidor en desar els canvis",
+    "updatedNote": {
+      "m": "Ja existia: s'ha actualitzat el {entity} {identifier}",
+      "f": "Ja existia: s'ha actualitzat la {entity} {identifier}"
+    },
+    "issue": {
+      "malformedJson": "El fitxer no és un JSON vàlid",
+      "unknownFormat": "No s'ha reconegut el format del fitxer",
+      "incomplete": "No s'han pogut obtenir les dades obligatòries del fitxer"
+    }
+  }
+}

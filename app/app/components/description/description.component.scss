@@ -1,0 +1,14 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-half);
+}
+
+.description-title {
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-contrast);
+}
+
+.description-text {
+  word-break: break-word;
+}

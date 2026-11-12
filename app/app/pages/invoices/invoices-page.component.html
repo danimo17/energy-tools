@@ -1,0 +1,19 @@
+<app-page-header [title]="'pages.invoices' | t" [buttons]="pageButtons" (action)="onAction($event)"></app-page-header>
+
+<app-card>
+  <p *ngIf="loading$ | async; else list">{{ 'common.loading' | t }}</p>
+  <ng-template #list>
+    <app-invoice-table [invoices]="(invoices$ | async) ?? []" (view)="openDetail($event)"></app-invoice-table>
+  </ng-template>
+</app-card>
+
+<app-import-dialog
+  [open]="importOpen"
+  [store]="store"
+  [spec]="importSpec"
+  (closed)="importOpen = false"
+></app-import-dialog>
+
+<app-drawer [open]="detailOpen" [card]="detailCard" (closed)="detailOpen = false">
+  <app-invoice-detail *ngIf="selected" [invoice]="selected"></app-invoice-detail>
+</app-drawer>

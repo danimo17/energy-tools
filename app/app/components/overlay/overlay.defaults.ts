@@ -1,0 +1,1 @@
+export const OVERLAY_ANIMATION_MS = 200;

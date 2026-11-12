@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Energy Tools"
+  },
+  "language": {
+    "ca": "Català",
+    "es": "Castellano"
+  },
+  "common": {
+    "action": {
+      "accept": "Aceptar",
+      "cancel": "Cancelar",
+      "close": "Cerrar",
+      "back": "Atrás",
+      "upload": "Subir",
+      "remove": "Quitar {entity}",
+      "import": "Importar",
+      "view": "Ver {entity}",
+      "delete": "Eliminar {entity}"
+    },
+    "confirm": {
+      "title": "Confirmación",
+      "message": "¿Seguro que quieres continuar?",
+      "delete": {
+        "m": "¿Quieres eliminar este {entity}? Esta acción no se puede deshacer.",
+        "f": "¿Quieres eliminar esta {entity}? Esta acción no se puede deshacer."
+      }
+    },
+    "success": "Acción completada correctamente",
+    "error": "Se ha producido un error",
+    "empty": "No hay datos que mostrar",
+    "actions": "Acciones",
+    "loading": "Cargando…",
+    "field": {
+      "file": "Archivo",
+      "status": "Estado",
+      "comments": "Comentarios",
+      "number": "Número",
+      "client": "Cliente",
+      "date": "Fecha",
+      "base": "Base imponible",
+      "tax": "Impuesto",
+      "total": "Total",
+      "noNumber": "(sin número)",
+      "period": "Periodo facturado",
+      "vat": "NIF/CIF",
+      "address": "Dirección"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "uploading": "Subiendo…",
+      "created": {
+        "m": "Creado",
+        "f": "Creada"
+      },
+      "createdWarnings": {
+        "m": "Creado con avisos",
+        "f": "Creada con avisos"
+      },
+      "updated": {
+        "m": "Actualizado",
+        "f": "Actualizada"
+      },
+      "updatedWarnings": {
+        "m": "Actualizado con avisos",
+        "f": "Actualizada con avisos"
+      },
+      "blocked": {
+        "m": "No creado",
+        "f": "No creada"
+      }
+    },
+    "result": {
+      "deleted": {
+        "m": "{Entity} eliminado",
+        "f": "{Entity} eliminada"
+      }
+    }
+  },
+  "pages": {
+    "dashboard": "Dashboard",
+    "invoices": "Facturas",
+    "settings": "Configuración"
+  },
+  "menu": {
+    "open": "Abrir el menú",
+    "close": "Cerrar el menú"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido a la herramienta de facturas."
+  },
+  "invoices": {
+    "issue": {
+      "baseRequired": "Falta la base imponible o no es un número",
+      "missingAddress": "El cliente no tiene dirección",
+      "emptyNumber": "La factura no tiene número",
+      "invertedRange": "El periodo está invertido: {from} es posterior a {to}",
+      "invalidVat": "El NIF/CIF «{vat}» no es válido",
+      "taxComputed": "Impuesto calculado (21 % de la base): {tax}",
+      "totalComputed": "Total calculado (base + impuesto): {total}",
+      "totalMismatch": "El total ({total}) no cuadra con base + impuesto ({expected})",
+      "missingVat": "El cliente no tiene NIF/CIF"
+    }
+  },
+  "toast": {
+    "title": {
+      "info": "Información",
+      "success": "Éxito",
+      "warning": "Aviso",
+      "error": "Error"
+    }
+  },
+  "settings": {
+    "language": "Idioma",
+    "theme": {
+      "title": "Tema",
+      "light": "Claro",
+      "dark": "Oscuro"
+    }
+  },
+  "entity": {
+    "invoice": {
+      "name": "factura",
+      "gender": "f",
+      "plural": "facturas"
+    },
+    "file": {
+      "name": "archivo",
+      "gender": "m",
+      "plural": "archivos"
+    }
+  },
+  "import": {
+    "title": "Importar {entities}",
+    "hint": "Arrastra aquí los archivos JSON",
+    "select": "Seleccionar archivos",
+    "empty": "Todavía no has añadido ningún archivo",
+    "summary": {
+      "title": "Resultado de la subida"
+    },
+    "serverError": "Error del servidor al guardar los cambios",
+    "updatedNote": {
+      "m": "Ya existía: se ha actualizado el {entity} {identifier}",
+      "f": "Ya existía: se ha actualizado la {entity} {identifier}"
+    },
+    "issue": {
+      "malformedJson": "El archivo no es un JSON válido",
+      "unknownFormat": "No se ha reconocido el formato del archivo",
+      "incomplete": "No se han podido obtener los datos obligatorios del archivo"
+    }
+  }
+}

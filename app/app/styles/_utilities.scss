@@ -1,0 +1,22 @@
+@use 'severities' as s;
+
+@each $name in s.$colors {
+  .text-#{$name} {
+    color: var(--color-#{$name});
+  }
+
+  @each $o in s.$opacities {
+    .text-#{$name}-#{$o} {
+      color: var(--color-#{$name}-#{$o});
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

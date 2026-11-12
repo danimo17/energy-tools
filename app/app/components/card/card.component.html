@@ -1,0 +1,14 @@
+<section [ngClass]="classes">
+  <header class="card-header" *ngIf="hasHeader">
+    <h2 class="card-title" *ngIf="title">{{ title }}</h2>
+    <app-button-list class="card-actions" [buttons]="headerButtons" (action)="action.emit($event)"></app-button-list>
+  </header>
+
+  <div class="card-body">
+    <ng-content></ng-content>
+  </div>
+
+  <footer class="card-footer" *ngIf="hasFooter">
+    <app-button-list class="card-actions" [buttons]="footerButtons" (action)="action.emit($event)"></app-button-list>
+  </footer>
+</section>

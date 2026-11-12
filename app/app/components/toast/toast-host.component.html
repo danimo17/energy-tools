@@ -1,0 +1,10 @@
+<div class="toast-host" aria-live="polite">
+  <app-toast
+    *ngFor="let item of store.select('items') | async; trackBy: trackById"
+    [severity]="item.severity"
+    [title]="item.title"
+    [description]="item.description"
+    (closed)="notifications.dismiss(item.id)"
+  >
+  </app-toast>
+</div>

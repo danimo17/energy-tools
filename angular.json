@@ -45,13 +45,11 @@
             "polyfills": "app/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "app/favicon.ico",
-              "app/assets"
-            ],
-            "styles": [
-              "app/styles.scss"
-            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["app/app/styles"]
+            },
+            "assets": ["app/favicon.ico", "app/assets"],
+            "styles": ["app/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -64,8 +62,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "12kb"
                 }
               ],
               "fileReplacements": [
@@ -113,13 +111,11 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "app/favicon.ico",
-              "app/assets"
-            ],
-            "styles": [
-              "app/styles.scss"
-            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["app/app/styles"]
+            },
+            "assets": ["app/favicon.ico", "app/assets"],
+            "styles": ["app/styles.scss"],
             "scripts": []
           }
         }

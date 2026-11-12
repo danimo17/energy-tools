@@ -1,0 +1,115 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  background: var(--color-contrast-40);
+  animation: overlay-fade-in var(--duration-overlay) var(--easing);
+}
+
+.overlay-panel app-card {
+  display: block;
+  height: 100%;
+}
+
+.overlay-center {
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+
+  .overlay-panel {
+    width: min(var(--width-dialog), 100%);
+    max-height: var(--max-height-dialog);
+    animation: overlay-pop-in var(--duration-overlay) var(--easing);
+  }
+
+  .card {
+    max-height: var(--max-height-dialog);
+  }
+}
+
+.overlay-left {
+  justify-content: flex-start;
+
+  .overlay-panel {
+    width: min(var(--width-drawer-narrow), 100%);
+    height: 100%;
+    animation: overlay-slide-in-left var(--duration-overlay) var(--easing);
+  }
+}
+
+.overlay-right {
+  justify-content: flex-end;
+
+  .overlay-panel {
+    width: min(var(--width-drawer), 100%);
+    height: 100%;
+    animation: overlay-slide-in var(--duration-overlay) var(--easing);
+  }
+}
+
+.overlay-closing {
+  animation: overlay-fade-out var(--duration-overlay) var(--easing) forwards;
+
+  &.overlay-center .overlay-panel {
+    animation: overlay-pop-out var(--duration-overlay) var(--easing) forwards;
+  }
+
+  &.overlay-left .overlay-panel {
+    animation: overlay-slide-out-left var(--duration-overlay) var(--easing) forwards;
+  }
+
+  &.overlay-right .overlay-panel {
+    animation: overlay-slide-out-right var(--duration-overlay) var(--easing) forwards;
+  }
+}
+
+@keyframes overlay-fade-in {
+  from {
+    background-color: transparent;
+  }
+}
+
+@keyframes overlay-fade-out {
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes overlay-pop-in {
+  from {
+    opacity: var(--opacity-hidden);
+    transform: scale(var(--scale-pop));
+  }
+}
+
+@keyframes overlay-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes overlay-slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes overlay-pop-out {
+  to {
+    opacity: var(--opacity-hidden);
+    transform: scale(var(--scale-pop));
+  }
+}
+
+@keyframes overlay-slide-out-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes overlay-slide-out-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
