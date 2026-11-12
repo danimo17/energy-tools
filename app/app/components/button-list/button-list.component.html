@@ -1,0 +1,8 @@
+<div class="btn-list" [class.btn-list-vertical]="orientation === 'vertical'" [class.btn-list-wrap]="wrap">
+  <app-button
+    *ngFor="let button of buttons; trackBy: trackById"
+    [config]="button"
+    (pressed)="action.emit(button.id)"
+  ></app-button>
+  <ng-content></ng-content>
+</div>

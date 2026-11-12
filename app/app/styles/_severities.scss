@@ -1,0 +1,28 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'palette';
+
+$colors: (light, bg, contrast, primary, info, success, warning, error);
+$severities: (primary, contrast, info, success, warning, error);
+$opacities: (10, 20, 40, 60);
+
+@mixin rgb-tokens($palette) {
+  @each $name, $value in $palette {
+    --rgb-#{$name}: #{color.red($value)} #{color.green($value)} #{color.blue($value)};
+  }
+}
+
+@mixin opacity-tokens {
+  @each $o in $opacities {
+    --opacity-#{$o}: #{math.div($o, 100)};
+  }
+}
+
+@mixin tokens {
+  @each $name in $colors {
+    --color-#{$name}: rgb(var(--rgb-#{$name}));
+    @each $o in $opacities {
+      --color-#{$name}-#{$o}: rgb(var(--rgb-#{$name}) / var(--opacity-#{$o}));
+    }
+  }
+}

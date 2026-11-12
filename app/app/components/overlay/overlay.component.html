@@ -1,0 +1,13 @@
+<div
+  *ngIf="state !== 'closed'"
+  class="overlay"
+  [style.top]="offsetTop"
+  [ngClass]="['overlay-' + position, state === 'closing' ? 'overlay-closing' : '']"
+  (click)="onBackdrop()"
+>
+  <div class="overlay-panel" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+    <app-card [config]="cardConfig" (action)="onAction($event)">
+      <ng-content></ng-content>
+    </app-card>
+  </div>
+</div>

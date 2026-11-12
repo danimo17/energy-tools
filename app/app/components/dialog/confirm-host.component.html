@@ -1,0 +1,3 @@
+<app-dialog [open]="open" [card]="card" (action)="onAction($event)" (closed)="resolve(false)">
+  <p>{{ message | t : messageParams }}</p>
+</app-dialog>

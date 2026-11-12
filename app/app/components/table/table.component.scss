@@ -1,0 +1,31 @@
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-cell {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: var(--border-width) solid var(--color-contrast-10);
+  white-space: nowrap;
+}
+
+.table-cell-wrap {
+  white-space: pre-line;
+}
+
+.table-cell-end {
+  text-align: right;
+}
+
+.table tbody tr:hover {
+  background: var(--color-contrast-10);
+}
+
+.table-cell-end .btn-list {
+  justify-content: flex-end;
+}

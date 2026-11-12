@@ -1,0 +1,24 @@
+<div class="menu-nav">
+  <nav class="menu-nav-links">
+    <app-button-list orientation="vertical">
+      <a
+        *ngFor="let item of items"
+        class="menu-nav-link borderless"
+        [routerLink]="item.path"
+        routerLinkActive="menu-nav-link-active"
+        (click)="navigate.emit()"
+      >
+        <app-icon [name]="item.icon"></app-icon>
+        <span>{{ item.label | t }}</span>
+      </a>
+    </app-button-list>
+  </nav>
+
+  <app-button
+    variant="ghost"
+    severity="contrast"
+    label="pages.settings"
+    icon="settings"
+    (pressed)="settings.emit()"
+  ></app-button>
+</div>

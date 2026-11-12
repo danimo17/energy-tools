@@ -1,0 +1,12 @@
+<button
+  type="button"
+  [ngClass]="classes"
+  [disabled]="disabled || busy"
+  [attr.aria-label]="iconOnly ? (label | t : labelParams) : null"
+  [attr.title]="iconOnly ? (label | t : labelParams) : null"
+  (click)="onClick()"
+>
+  <span *ngIf="busy" class="btn-spinner"></span>
+  <app-icon *ngIf="icon && !busy" [name]="icon"></app-icon>
+  <span *ngIf="!iconOnly">{{ label | t : labelParams }}</span>
+</button>

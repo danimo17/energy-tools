@@ -1,0 +1,7 @@
+<div class="detail">
+  <app-description
+    *ngFor="let field of fields; trackBy: trackByLabel"
+    [title]="field.label | t"
+    [text]="field.value"
+  ></app-description>
+</div>

@@ -1,0 +1,36 @@
+<app-dialog [open]="open" [card]="card" (action)="onAction($event)" (closed)="close()" (afterClosed)="reset()">
+  <app-dropzone
+    hint="import.hint"
+    buttonLabel="import.select"
+    accept=".json,application/json"
+    [disabled]="running"
+    (filesSelected)="addFiles($event)"
+  ></app-dropzone>
+
+  <ul class="pending" *ngIf="pending.length">
+    <li class="pending-item" *ngFor="let item of pending; trackBy: trackById">
+      <app-icon name="file"></app-icon>
+      <span class="pending-name">{{ item.file.name }}</span>
+      <span class="pending-status" [ngClass]="statusClass(item.status)">{{
+        statusLabel(item.status) | t : entity
+      }}</span>
+      <app-button
+        variant="ghost"
+        severity="contrast"
+        size="sm"
+        label="common.action.remove"
+        [labelParams]="fileEntity"
+        icon="close"
+        [iconOnly]="true"
+        [disabled]="running"
+        (pressed)="removeFile(item.id)"
+      ></app-button>
+    </li>
+  </ul>
+  <p class="pending-empty empty-state" *ngIf="!pending.length && !results.length">{{ 'import.empty' | t }}</p>
+
+  <section class="results section" *ngIf="results.length">
+    <h3 class="text-label">{{ 'import.summary.title' | t }}</h3>
+    <app-table [columns]="resultColumns" [rows]="results"></app-table>
+  </section>
+</app-dialog>

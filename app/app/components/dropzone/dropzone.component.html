@@ -1,0 +1,21 @@
+<div
+  class="dropzone empty-state"
+  [class.dropzone-active]="dragging"
+  (dragover)="onDragOver($event)"
+  (dragleave)="dragging = false"
+  (drop)="onDrop($event)"
+>
+  <app-icon name="upload"></app-icon>
+  <p class="dropzone-hint">{{ hint | t }}</p>
+  <app-button variant="outline" [label]="buttonLabel" [disabled]="disabled" (pressed)="fileInput.click()"></app-button>
+  <input
+    #fileInput
+    class="sr-only"
+    type="file"
+    tabindex="-1"
+    [accept]="accept"
+    [multiple]="multiple"
+    [disabled]="disabled"
+    (change)="onChange($event)"
+  />
+</div>

@@ -1,1 +1,11 @@
-<h1>{{ greeting }}</h1>
+<ng-template #settingsPanel><app-settings-panel></app-settings-panel></ng-template>
+
+<div class="app-shell">
+  <app-side-menu [settingsPanel]="settingsPanel" (settings)="settingsOpen = true"></app-side-menu>
+  <main class="app-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<app-settings-drawer [open]="settingsOpen" (closed)="settingsOpen = false"></app-settings-drawer>
+<app-toast-host></app-toast-host>
+<app-confirm-host></app-confirm-host>

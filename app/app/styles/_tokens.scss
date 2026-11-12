@@ -1,0 +1,73 @@
+@use 'palette';
+@use 'severities' as s;
+
+:root {
+  @include s.rgb-tokens(palette.$light);
+
+  --radius: 0.5rem;
+  --space-half: 0.125rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --shadow: 0 1px 3px rgb(0 0 0 / 0.12), 0 4px 12px rgb(0 0 0 / 0.08);
+  --transition: 0.2s ease;
+  --duration-overlay: 0.2s;
+  --top-bar-height: 3.5rem;
+  --actions-gap: 0.5rem;
+  --actions-gap-ghost: 0px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+  --letter-spacing-label: 0.04em;
+
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --border-width-accent: 4px;
+
+  --control-size-sm: 2rem;
+  --control-size-md: 2.5rem;
+  --control-size-lg: 3rem;
+
+  --width-sidebar: 15rem;
+  --width-drawer-narrow: 20rem;
+  --width-drawer: 28rem;
+  --width-dialog: 40rem;
+  --width-toast-min: 16rem;
+  --width-toast-max: 24rem;
+
+  --radius-none: 0;
+  --radius-round: 100%;
+  --z-overlay: 1000;
+  --z-top-bar: 1100;
+  --z-toast: 2000;
+  --easing: ease;
+  --duration-spin: 0.7s;
+  --hover-brightness: 0.9;
+  --scale-pop: 0.95;
+  --max-height-dialog: 90vh;
+  --icon-size: 1.1em;
+  --opacity-full: 1;
+  --opacity-disabled: 0.5;
+  --opacity-hidden: 0;
+  @include s.opacity-tokens;
+
+  @include s.tokens;
+}
+
+:root[data-theme='dark'] {
+  @include s.rgb-tokens(palette.$dark);
+  @include s.tokens;
+}

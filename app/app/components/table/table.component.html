@@ -1,0 +1,41 @@
+<div class="table-wrapper">
+  <table class="table" *ngIf="view.length; else empty">
+    <thead>
+      <tr>
+        <th
+          *ngFor="let column of columns"
+          class="table-cell text-label"
+          [class.table-cell-end]="column.align === 'end'"
+        >
+          {{ column.label | t }}
+        </th>
+        <th *ngIf="actions.length" class="table-cell text-label table-cell-end">{{ 'common.actions' | t }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of view">
+        <td
+          *ngFor="let column of columns"
+          class="table-cell"
+          [class.table-cell-end]="column.align === 'end'"
+          [class.table-cell-wrap]="column.wrap"
+          [ngClass]="column.className ? column.className(item.row) : ''"
+        >
+          {{ column.value(item.row) }}
+        </td>
+        <td *ngIf="actions.length" class="table-cell table-cell-end">
+          <app-button-list>
+            <app-button
+              *ngFor="let button of item.actions; trackBy: trackById"
+              [config]="button"
+              (pressed)="rowAction.emit({ id: button.id, row: item.row })"
+            ></app-button>
+          </app-button-list>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #empty>
+    <p class="empty-state">{{ 'common.empty' | t }}</p>
+  </ng-template>
+</div>

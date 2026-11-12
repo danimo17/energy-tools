@@ -1,0 +1,15 @@
+<div [ngClass]="['toast', 'toast-' + severity]" role="status">
+  <div class="toast-content">
+    <strong class="toast-title">{{ title }}</strong>
+    <span class="toast-description text-contrast-60" *ngIf="description">{{ description }}</span>
+  </div>
+  <app-button
+    variant="ghost"
+    severity="contrast"
+    size="sm"
+    label="common.action.close"
+    icon="close"
+    [iconOnly]="true"
+    (pressed)="closed.emit()"
+  ></app-button>
+</div>

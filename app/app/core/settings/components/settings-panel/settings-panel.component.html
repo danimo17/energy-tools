@@ -1,0 +1,26 @@
+<section class="section">
+  <h3 class="text-label">{{ 'settings.language' | t }}</h3>
+  <app-button-list role="group" [wrap]="true">
+    <app-button
+      *ngFor="let lang of languages"
+      size="sm"
+      [label]="'language.' + lang"
+      [variant]="lang === (translate.language$ | async) ? 'solid' : 'outline'"
+      (pressed)="translate.setLanguage(lang)"
+    ></app-button>
+  </app-button-list>
+</section>
+
+<section class="section">
+  <h3 class="text-label">{{ 'settings.theme.title' | t }}</h3>
+  <app-button-list role="group" [wrap]="true">
+    <app-button
+      *ngFor="let option of themes"
+      size="sm"
+      [label]="'settings.theme.' + option"
+      [icon]="option === 'dark' ? 'moon' : 'sun'"
+      [variant]="option === (theme.theme$ | async) ? 'solid' : 'outline'"
+      (pressed)="theme.set(option)"
+    ></app-button>
+  </app-button-list>
+</section>
